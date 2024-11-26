@@ -1,0 +1,665 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    overflow-x: hidden !important;
+
+}
+
+/*share propperty*/
+.container {
+    width: 80%;
+    margin-inline: auto;
+}
+ul {
+    list-style: none;
+}
+:root {
+    --maincolor:#CE1212 ;
+    --secondcolir:#7f7f90;
+    --colorOfSection:#eee;   
+    --thirdcolor:#212529 ; 
+}
+    
+a{
+    text-decoration: none;
+    color: white;
+}
+img {
+    width: 100%;
+    display: block;
+}
+/* start of navbar of Mealify */
+div.navbar {
+    position: fixed;
+    box-shadow:0px 0px 15px 0px #00000042;
+    background-color: #fff;
+    z-index: 9999;
+    top: 0;
+    width: 100%;
+ }
+div.navbar div.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: baseline;
+    padding-block: 20px;
+}
+div.navbar div.logo h1 {
+    position: relative;
+}
+div.navbar div.logo h1::after {
+    content: "";
+    border: solid 2px var(--maincolor,red);
+    position: absolute;
+    top: 70%;
+    border-radius: 60%;
+}
+div.navbar div.linkes ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+div.navbar div.linkes ul li a.differentcolor {
+    text-decoration: none;
+    color: #000;
+    padding-block: 4px;
+    border-bottom: solid 2px var(--maincolor,red) ;
+}
+div.navbar div.linkes ul li a{
+    /* text-decoration: none; */
+    color: var(--secondcolir , black) ;
+    font-size: 17px;
+    transition: all .5s;
+    position: relative;
+}
+div.navbar div.linkes ul li a.differentborder::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 120%;
+    border-bottom: solid 2px var(--maincolor,red)   ;
+    right: 0;
+    width: 0;
+    transition: width .5s ease-in;
+}
+div.navbar div.linkes ul li a:hover{
+    color: #000;
+}
+div.navbar div.linkes ul li a:hover::before{
+    width: 100%;
+}
+/* end of navbar of Mealify */
+/* start of header section*/
+div.header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--colorOfSection, #ddd);
+}
+div.header div.container {
+    padding-block: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    flex-direction: column-reverse;
+}
+div.header div.container div.content {
+    width: 100%;
+    text-align: center;
+}
+div.header div.container div.content h2{
+    font-size: 65px;
+    font-family: "Amatic SC", sans-serif;
+    color: #37373f;
+    font-weight: bold;
+}
+div.header div.container div.content p {
+    margin-block: 20px;
+    line-height: 1.6;
+    font-size: 1rem;
+    color: #4f4f5a;
+}
+div.header div.container div.content  div.button_video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+div.header div.container div.content  div.button_video button.book{
+    padding: 15px 30px;
+    background-color: var(--maincolor ,red) ;
+    border-radius: 0px 50px 50px 60px; ;
+    border: none;
+}
+div.header div.container div.content  div.button_video button.video  {
+    border: none;   
+}
+div.header div.container div.content  div.button_video button.video a{
+    display: flex;
+    color: var(--thirdcolor);
+    align-items: baseline;
+}
+div.header div.container div.content  div.button_video button.video a div {
+    border: solid #fff;
+    border-width: 15px;
+    border-radius:  100%;
+    background-color: #fff; 
+    margin-right: 5px;
+    border-left: 10px solid var(--maincolor);
+    transition: all .5s;
+}
+div.header div.container div.content  div.button_video button.video a:hover {
+    color: var(--maincolor);
+}
+div.header div.container div.image {
+    width: 100%;
+    margin-block: 20px;
+}
+div.header div.container div.image img{
+    border-radius: 50%;
+    box-shadow:0px 5px 15px 6px #00000042;
+}
+div.header div.container div.image:hover {
+    animation: shake infinite;
+    animation-duration: .1s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+}
+@keyframes shake {
+    to{
+        transform:  translate(-1px, -1px) rotate(1deg);
+    }
+    form{
+        transform:  translate(1px, 1px) rotate(-1deg);    }
+    
+}
+/* end of header section*/
+/* start of cheef section*/
+div.cheef {
+    padding-block: 50px;
+    text-align: center;
+    width: 100%;
+}
+h2{
+    color:var(--secondcolir); 
+    font-size: 14px;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+div.cheef div.content p {
+    font-size: 50px;
+    font-family: "Amatic SC", sans-serif;
+    color: var(--thirdcolor); 
+}
+ span {
+    color: var(--maincolor);
+}
+div.cheef div.container {
+    display: flex;
+    flex-direction: column;
+
+}
+div.cheef div.container div.item {
+    padding-inline  :20px ;
+    margin-block: 20px;
+    position: relative;    
+}
+div.cheef div.container div.item.wiliiam
+{
+    order: 1;
+}
+div.cheef div.container div.item div.inner {
+    border-radius: 10px;
+    box-shadow:3px 3px 15px 0px rgba(0, 0, 0, 0.3);
+    transition: all .5s;
+    position: relative;
+    width: 100%;
+
+}
+div.cheef div.container div.item div.inner  div.image img {
+    border-radius: 10px 10px 0 0;
+}
+div.cheef div.container div.item div.inner  div.image {
+    position: relative;
+}
+div.cheef div.container div.item div.inner  div.image .wave {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+}
+div.cheef div.container div.item div.inner div.text h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+div.cheef div.container div.item div.inner  div.text span, 
+div.cheef div.container div.item div.inner  div.text p {
+    padding: 5px 0 10px ;
+    font-size: 14px;
+    font-style: italic;
+    color: #000;
+}
+div.cheef div.container div.item div.inner  div.text {
+    padding: 10px  25px 25px;
+}
+div.cheef div.container div.item div.inner:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+div.cheef div.container div.item div.inner ul {
+    background-color: #ffffff4d; 
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    border-radius:10px ;
+    padding-block: 10px;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    transform: translate(130%);
+    opacity: 0;
+    transition: all .5s .5s;
+    list-style: none;
+}
+div.cheef div.container div.item div.inner ul  li i {
+    color:#37373f66;
+    transition: all .5s;
+}
+div.cheef div.container div.item div.inner ul  li i:hover {
+    color:#37373fe6;
+}
+div.cheef div.container div.item div.inner:hover ul{
+    transform: translate(0%);
+    opacity: 1;
+}
+
+/* end of cheef section*/
+/* start of gallery section*/
+div.gallery {
+    background-color: var(--colorOfSection);
+    padding-block: 100px;
+    text-align: center;
+}
+div.gallery div.conatact p {
+    font-size: 50px; 
+    font-family: "Amatic SC", sans-serif;
+    color: var(--thirdcolor);
+}
+div.gallery div.conatact {
+    margin-bottom: 50px;
+}
+
+div.gallery div.container div.image img{
+    transition: all .5s;
+}
+div.gallery div.container div.image div.item div.photo div.inner {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: all .5s;
+    opacity: 0;
+}
+div.gallery div.container div.image div.item div.photo:hover div.inner {
+    transform: translateY(0) ;
+    opacity: 1;
+}
+div.gallery div.container div.image img:hover {
+    transform: scale(1.2);
+}
+div.gallery div.container div.image div.item div.photo div.inner p{
+    color: white; 
+}
+div.call ::selection {
+    content: "";
+    color: white;  
+    background-color: var(--maincolor);   
+}
+div.gallery div.container div.image {
+    display: flex;
+    flex-direction: column;
+}
+div.gallery div.container div.image div.item {
+    padding: 10px;
+}
+div.gallery div.container div.image div.item div.photo {
+    border: 5px solid white; 
+    margin-block: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* end of gallery section*/ 
+/* start of CONTACT  */
+div.contact div.container {
+    padding: 50px 10px;
+    margin-top: 50px;
+}
+
+div.contact div.container  div.contact_us  p {
+    font-size: 50px;
+    font-family: "Amatic SC", sans-serif;
+    color: var(--thirdcolor);
+    text-align: center; 
+}
+div.contact div.container   div.map  iframe{
+    width: 100%;
+    height: 400px;
+    margin-block: 20px;
+} 
+div.contact div.container  div.call_us {
+    display: flex;
+    margin-block: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+div.contact div.container  div.call_us div.Address 
+ {
+    width: 100%;
+    background-color: var(--colorOfSection);
+    padding: 20px;
+    display: flex;
+}
+div.contact div.container   div.icon {
+    display: flex;
+}
+div.contact div.container   div.icon i {
+    background-color:  var(--maincolor); 
+    border-radius: 200px;
+    border: solid 15px  var(--maincolor); 
+    color: white;
+    margin-right: 9px;
+    align-self: center;
+}
+div.contact div.container    div.info h3 {
+    color: #7d7d7d;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 5px 0; 
+}
+div.contact div.container    div.info p {
+    color:var(--thirdcolor); 
+}
+div.contact div.container  div.call_us div.houes {
+    width: 100%;
+    background-color: var(--colorOfSection);
+    padding: 20px;
+    display: flex;
+}
+div.contact div.container  div.call_us div.email {
+    width: 100%;
+    background-color: var(--colorOfSection);
+    padding: 20px;
+    display: flex;
+}
+div.contact div.container  div.call_us div.call {
+    width: 100%;
+    background-color: var(--colorOfSection);
+    padding: 20px;
+    display: flex;
+}
+div.contact div.container  form {
+    background-color: white;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-shadow: 0 0 1.875rem #00000014;
+    gap: 20px;
+}
+
+div.contact div.container  .forma div.your_name  input {
+    width: 100%;
+    border: solid 2PX #ce12123d; 
+    padding: 15px;
+    margin-block: 10px;
+
+}
+div.contact div.container  .forma .inpt {
+    padding: 15px;
+    border: solid 2PX #ce12123d; 
+}
+
+div.contact div.container  .forma textarea {  
+    padding: 15px;
+    border: solid 2PX #ce12123d; 
+    resize: none;
+}
+
+div.contact div.container  .forma button {
+    width: fit-content;
+    padding: 12px 40px;
+    background-color:  var(--maincolor); 
+    color:#fff;
+    border: none;
+    border-width: 50px;
+    border-radius: 30px;
+    margin-top: 20px;
+    align-self: center;
+}
+div.contact div.container  .forma textarea:focus {
+   border: solid 3px  var(--maincolor);  
+   outline: none; 
+}
+div.contact div.container  .forma div.your_name  input:focus {
+   border: solid 3px  var(--maincolor);   
+   outline: none;
+}
+div.contact div.container  .forma .inpt:focus {
+   border: solid 3px  var(--maincolor);   
+   outline: none;
+}
+/* end of CONTACT  */
+/* start of footer */
+div.footer {
+    background-color: #000;
+    color: white;
+    box-shadow: 0px -1px 5px #0007; 
+    padding-block: 30px;
+}
+div.footer div.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+div.footer div.container  div.about div.logo {
+    display: flex;
+    gap: 10px;
+}
+div.footer div.container  div.about div.logo h2 {
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+
+}
+div.footer div.container  div.about div.logo i {
+    background-color: #ef5261;
+    border-radius: 200px;
+    border: solid 10px #ef5261; 
+    color: white;
+    margin-right: 9px;
+    align-self: center;
+}
+div.footer div.container  div.about p {
+    color: white;
+    margin-block: 10px; 
+}
+div.footer div.container  div.about h3{
+    text-align: center;
+    padding: 10px;
+    border-bottom: solid 1px #ffffff7e;
+    margin-bottom: 10px;
+ 
+}
+div.footer div.container  div.about  ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+div.footer div.container  div.subscribe p {
+    margin-block: 10px;
+    color: white; 
+}
+div.footer div.container  div.subscribe div.email {
+    display: flex;
+    gap: 5px;
+}
+div.footer div.container  div.subscribe div.email input {
+    width: 80%;
+    padding: 10px;
+}
+div.footer div.container  div.subscribe div.email button {
+    padding: 6px 6px;
+    background-color:  var(--maincolor);
+    color:#fff;
+    border: none;
+}
+div.footer div.container  div.subscribe h3 {
+    margin-block: 10px;
+}
+div.footer div.container  div.subscribe ul 
+{
+    display: flex;
+    flex-wrap: wrap ;
+    justify-content: space-between;
+}
+div.footer div.container  div.subscribe ul li {
+    width: 40%;
+    position: relative;
+    transition: all .5s ;
+    padding-inline: 10px;
+}
+div.footer div.container  div.subscribe ul li::after {
+    content: "";
+    border: 5px solid ;
+    border-color: transparent  transparent transparent white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .5s ;
+    left: 2px;
+}
+div.footer div.container  div.subscribe ul li:hover{
+    transform: translateX(20px);
+    background-color: #222;  
+}
+div.footer div.container div.touch h3 {
+    margin-bottom: 10px;
+}
+div.footer div.container div.touch ul li  {
+    margin-block: 20px;
+    display: flex;
+    align-items: baseline;
+}
+div.footer div.container div.touch ul  span {
+    color: #fff; 
+}
+div.footer div.container div.touch ul li i {
+    color:  var(--maincolor); 
+    margin-right: 10px;
+}
+div.footer div.container div.touch ul li a{
+    color: white;
+    text-decoration: none; 
+}   
+/* end of footer  */
+.xsm-100 {
+    width: 100%;
+}
+
+@media only screen and (min-width: 600px)  {
+    div.header div.container div.content  div.button_video  {
+        flex-direction: row;
+        justify-content: center;
+    }
+    div.cheef div.container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+  
+        div.cheef div.container div.item.wiliiam {
+            order: -1;
+    }
+
+    }
+
+@media only screen and (min-width: 992px)  
+{ 
+    div.cheef div.container {
+        display: flex;
+        flex-direction: row;
+    
+    }
+
+    div.header div.container {
+        flex-direction: row;
+        align-items: center;
+    }
+    div.header div.container div.content  div.button_video {
+        flex-direction: row;
+        justify-content: flex-start;
+
+    }
+    div.header div.container div.content {
+        width: 40%;
+    }
+    div.header div.container div.content h2 {
+        text-align: start;
+    }
+    div.header div.container div.image {
+        width: 40%;
+    }
+    
+  
+    div.cheef div.container div.item.wiliiam {
+        order: -1;
+    }
+    div.gallery div.container div.image {
+        display: flex;
+    }
+    div.contact div.container  div.call_us div.Address,
+    div.contact div.container  div.call_us div.houes,
+    div.contact div.container  div.call_us div.email,
+    div.contact div.container  div.call_us div.call {
+
+        width: 49%;
+    }
+    div.contact div.container  .forma div.your_name {
+        display: flex;
+        gap: 20px;
+    }
+    div.contact div.container  .forma div.your_name  input {
+        margin-bottom: 0;
+    }
+    div.footer div.container {
+        flex-direction: row;
+    }
+    div.footer div.container  div.subscribe div.email button {
+        padding: 12px 12px; 
+    }
+    div.gallery div.container div.image {
+        display: flex;
+        flex-direction: row;
+    } 
+
+
+
+        
